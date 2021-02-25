@@ -1,5 +1,6 @@
 wrd  = "apple"
 displayList = []
+wrongAns = []
 
 
 def didWin(displayList):
@@ -16,15 +17,26 @@ print(displayList)
 
 while (not didWin(displayList)):
     guess = input("choose a lowercase letter: ")
+        
+
 
     for i, character in enumerate(wrd):    
         if character == guess:
             displayList[i] = character
         
+    
+    if guess not in wrd:
+        print("wrong")
+        wrongAns.append(guess)
+        print(wrongAns)
+    else:
+        print(displayList)
+            
+        
         
 
 
-    print(displayList)
+    
 
 
 
