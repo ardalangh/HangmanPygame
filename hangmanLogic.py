@@ -3,6 +3,12 @@ displayList = []
 wrongAns = []
 
 
+
+
+
+
+
+
 def didWin(displayList):
     return "-" not in displayList
 
@@ -15,11 +21,19 @@ print(displayList)
 
 
 
-while (not didWin(displayList)):
+while (True):
+
+    if len(wrongAns) == 6:
+        print("you lost")
+        break
+
+
+    if didWin(displayList):
+        print("you won")
+        break
+
+
     guess = input("choose a lowercase letter: ")
-        
-
-
     for i, character in enumerate(wrd):    
         if character == guess:
             displayList[i] = character
