@@ -6,8 +6,8 @@ words = file1.readlines()
 randomWrd = random.choice(words)
 print(randomWrd)
 
-
-
+# HW
+# how to get rid of the last two indexes of string in python? 
 
 
 
