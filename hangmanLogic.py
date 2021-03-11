@@ -2,9 +2,13 @@ import random
 
 
 file1 = open("words.txt", "r")
+
 words = file1.readlines()
-randomWrd = random.choice(words)
-print(randomWrd)
+for i, w in enumerate(words):
+    words[i] = w[0:-1]
+
+# randomWrd = random.choice(words)
+print(words)
 
 # HW
 # how to get rid of the last two indexes of string in python? 
