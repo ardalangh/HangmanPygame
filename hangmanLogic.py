@@ -7,15 +7,12 @@ words = file1.readlines()
 for i, w in enumerate(words):
     words[i] = w[0:-1]
 
-# randomWrd = random.choice(words)
-print(words)
-
-# HW
-# how to get rid of the last two indexes of string in python? 
+randomWrd = random.choice(words)
 
 
 
-# wrd  = "apple"
+
+wrd  = randomWrd
 
 
 
@@ -28,8 +25,8 @@ print(words)
 
 
 
-# displayList = []
-# wrongAns = []
+displayList = []
+wrongAns = []
 
 
 
@@ -38,41 +35,41 @@ print(words)
 
 
 
-# def didWin(displayList):
-#     return "-" not in displayList
+def didWin(displayList):
+    return "-" not in displayList
 
 
-# for character in wrd:
-#     displayList.append("-")
+for character in wrd:
+    displayList.append("-")
 
-# print("Hello welcome to hangman guess a letter")
-# print(displayList)
-
-
-
-# while (True):
-#     if len(wrongAns) == 6:
-#         print("you lost")
-#         break
+print("Hello welcome to hangman guess a letter")
+print(displayList)
 
 
-#     if didWin(displayList):
-#         print("you won")
-#         break
+
+while (True):
+    if len(wrongAns) == 6:
+        print("you lost")
+        break
 
 
-#     guess = input("choose a lowercase letter: ")
-#     for i, character in enumerate(wrd):    
-#         if character == guess:
-#             displayList[i] = character
+    if didWin(displayList):
+        print("you won")
+        break
+
+
+    guess = input("choose a lowercase letter: ")
+    for i, character in enumerate(wrd):    
+        if character == guess:
+            displayList[i] = character
         
     
-#     if guess not in wrd:
-#         print("wrong")
-#         wrongAns.append(guess)
-#         print(wrongAns)
-#     else:
-#         print(displayList)
+    if guess not in wrd:
+        print("wrong")
+        wrongAns.append(guess)
+        print(wrongAns)
+    else:
+        print(displayList)
             
         
         
