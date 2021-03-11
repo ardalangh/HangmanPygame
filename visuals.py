@@ -6,10 +6,55 @@ WHITE = (255,255,255)
 HEIGHT = 400 
 WIDTH = 400
 
-
-
 pygame.init()
 surface = pygame.display.set_mode((HEIGHT, WIDTH))
+
+
+
+
+
+class AllKeyLetters:
+    def __init__(self, h, w):
+        self.w = w
+        self.h = h
+        self.lstOfKeys = []
+        self.width_of_key = calculate_width()
+        self.height_of_key = None
+
+
+    def calculate_width(self):
+        width_wo_margin = self.w - self.w * 0.2
+        width_wo_spaces_margin = width_wo_margin - 10 * self.w * 0.01
+        return width_wo_spaces_margin / 9 
+
+
+
+    
+     
+
+
+
+
+
+
+class KeyLetter:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
