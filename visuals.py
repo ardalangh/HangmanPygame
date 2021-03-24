@@ -7,7 +7,7 @@ HEIGHT = 400
 WIDTH = 400
 
 pygame.init()
-surface = pygame.display.set_mode((HEIGHT, WIDTH))
+surface = pygame.display.set_mode((HEIGHT, WIDTH), pygame.RESIZABLE)
 
 
 
@@ -29,13 +29,6 @@ class AllKeyLetters:
 
 
 
-    
-     
-
-
-
-
-
 
 class KeyLetter:
     def __init__(self, x, y):
@@ -44,31 +37,36 @@ class KeyLetter:
     
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Main Loop
 running = True
 clock = pygame.time.Clock()
 while running:
-    for event in pygame.event.get(): 
-        if event.type == pygame.QUIT:
-            running = False
+    pygame.event.pump()
+    event = pygame.event.wait()
+    if event.type == pygame.QUIT:
+        running = False
+    
+    # elif event.type == VIDEORESIZE:
+    #     screen.blit(pygame.transform.scale(pi))
+    # elif event.type == VIDEOEXPOSE:
+    #     screen.fill((0,0,0))
+    #     screen.blit(pygame.transform.scale())
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     surface.fill(WHITE)
 
     p1 = (19,19)
