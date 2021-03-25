@@ -11,8 +11,7 @@ WHITE = (255,255,255)
 
 HEIGHT = get_monitors()[0].height
 WIDTH = get_monitors()[0].width
-print(HEIGHT)
-print(WIDTH)
+
 
 pygame.init()
 surface = pygame.display.set_mode((HEIGHT, WIDTH), pygame.RESIZABLE)
@@ -21,24 +20,17 @@ surface = pygame.display.set_mode((HEIGHT, WIDTH), pygame.RESIZABLE)
 
 
 
-class AllKeyLetters:
+class ButtonsContainer:
     def __init__(self, h, w):
-        self.w = w
-        self.h = h
-        self.lstOfKeys = []
-        self.width_of_key = calculate_width()
-        self.height_of_key = None
+        footerHeight = round (0.2 * h)
+        self.x =     
 
 
-    def calculate_width(self):
-        width_wo_margin = self.w - self.w * 0.2
-        width_wo_spaces_margin = width_wo_margin - 10 * self.w * 0.01
-        return width_wo_spaces_margin / 9 
+    
 
 
 
-
-class KeyLetter:
+class Buttons:
     def __init__(self, x, y):
         self.x = x
         self.y = y 
@@ -54,11 +46,6 @@ while running:
     if event.type == pygame.QUIT:
         running = False
     
-    # elif event.type == VIDEORESIZE:
-    #     screen.blit(pygame.transform.scale(pi))
-    # elif event.type == VIDEOEXPOSE:
-    #     screen.fill((0,0,0))
-    #     screen.blit(pygame.transform.scale())
 
     
     
