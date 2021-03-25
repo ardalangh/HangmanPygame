@@ -1,10 +1,23 @@
 import pygame
+from screeninfo import get_monitors
+
+
+
+
+
+userHeight = get_monitors()[0].height
+userWigth = get_monitors()[0].width
+    
+
+
+
 # COLORS
 BLACK = (0,0,0)
 WHITE = (255,255,255)
 
-HEIGHT = 400 
-WIDTH = 400
+HEIGHT = get_monitors()[0].height
+WIDTH = get_monitors()[0].width
+p[r]
 
 pygame.init()
 surface = pygame.display.set_mode((HEIGHT, WIDTH), pygame.RESIZABLE)
