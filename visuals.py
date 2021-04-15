@@ -2,13 +2,6 @@ import pygame
 from screeninfo import get_monitors
 
 
-class ButtonsContainer:
-    def __init__(self, h, w):
-        footerHeight = round(0.2 * h)
-        self.x = 0
-        self.y = 0
-
-
 class Buttons:
     def __init__(self, x, y, letter):
         self.x = x
