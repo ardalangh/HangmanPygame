@@ -1,9 +1,11 @@
 class Button:
+    WIDTH = 20
+    HEIGHT = 30 
+
     def __init__(self, x, y):
         self.x = x
         self.y = y
-        self.h = 20
-        self.w = 30
+
 
     def draw(self, surface):
         font = pygame.font.Font('freesansbold.ttf', 32)
