@@ -1,5 +1,7 @@
 import pygame
 
+from visuals import HEIGHT, WIDTH
+
 pygame.init()
 surface = pygame.display.set_mode((HEIGHT, WIDTH))
 
@@ -12,7 +14,7 @@ while running:
     if event.type == pygame.QUIT:
         running = False
 
-    surface.fill(WHITE)
+    surface.fill((255, 255, 255))
 
     p1 = (19, 19)
     p2 = (19, 60)
